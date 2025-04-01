@@ -1,0 +1,981 @@
+[
+    {
+        "id": "b76e07cc73437430",
+        "type": "tab",
+        "label": "iot_ws_lora",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a0b1ed0895f897d2",
+        "type": "group",
+        "z": "b76e07cc73437430",
+        "name": "mqtt-ttn-debugging",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "d579b6b7f8c19cad",
+            "da5f0eee4df411b9",
+            "7c3f2554df714e5b",
+            "bd2ad14949f6a20d",
+            "9351eebe27ccc2a3",
+            "ba78c621b350a7d7",
+            "6ee145a492e1f711"
+        ],
+        "x": 14,
+        "y": 719,
+        "w": 712,
+        "h": 282
+    },
+    {
+        "id": "d830577d72ddaeb6",
+        "type": "mqtt-broker",
+        "name": "TTN MQTT",
+        "broker": "eu1.cloud.thethings.network",
+        "port": "1883",
+        "tls": "",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "b3ddbaceda2eca43",
+        "type": "ui_tab",
+        "name": "Tab",
+        "icon": "dashboard",
+        "order": 0
+    },
+    {
+        "id": "ba2b69e784299789",
+        "type": "ui_group",
+        "name": "temp",
+        "tab": "b3ddbaceda2eca43",
+        "order": null,
+        "disp": false,
+        "width": "4",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4a2a9626e984029b",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#000000",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#000000",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#000000",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#262626",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#000000",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "true",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "3b2a72addecdf04a",
+        "type": "ui_group",
+        "name": " hum",
+        "tab": "b3ddbaceda2eca43",
+        "order": 2,
+        "disp": false,
+        "width": 4,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f526c016d409464f",
+        "type": "ui_group",
+        "name": "press",
+        "tab": "b3ddbaceda2eca43",
+        "order": 3,
+        "disp": false,
+        "width": "4",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "42ae0f116d29be14",
+        "type": "ui_group",
+        "name": "wind",
+        "tab": "b3ddbaceda2eca43",
+        "order": 4,
+        "disp": false,
+        "width": 4,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "761f6d9572fb2429",
+        "type": "ui_group",
+        "name": "rain",
+        "tab": "b3ddbaceda2eca43",
+        "order": 5,
+        "disp": false,
+        "width": 4,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "757d230de331515d",
+        "type": "mqtt in",
+        "z": "b76e07cc73437430",
+        "name": "tts-mqtt-in",
+        "topic": "#",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "d830577d72ddaeb6",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 320,
+        "y": 80,
+        "wires": [
+            [
+                "828e7f99e777030d"
+            ]
+        ]
+    },
+    {
+        "id": "828e7f99e777030d",
+        "type": "function",
+        "z": "b76e07cc73437430",
+        "name": "decode-tts-message",
+        "func": "function decodePayload(bytes) {\n    try {\n        // Extract and scale sensor values\n        const temp = ((bytes[0]<<8 | bytes[1]) - 5000) / 100;\n        const pressure = (bytes[2]<<8 | bytes[3]) / 10;\n        const humidity = bytes[4] / 2;\n        \n        return {\n            temperature: temp,\n            airpressure: pressure,\n            humidity: humidity\n        };\n    } catch (e) {\n        return { error: e.message };\n    }\n}\n\n// Process incoming TTN V3 message\ntry {\n    if (msg.payload?.uplink_message?.frm_payload) {\n        const buffer = Buffer.from(msg.payload.uplink_message.frm_payload, 'base64');\n        msg.payload = decodePayload(buffer);\n        return msg;\n    }\n    return { payload: { error: \"Invalid message format\" } };\n} catch (error) {\n    return { payload: { error: error.message } };\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 60,
+        "wires": [
+            [
+                "55e88fdd44cd84ae",
+                "29be053138c9bdcc"
+            ]
+        ]
+    },
+    {
+        "id": "55e88fdd44cd84ae",
+        "type": "debug",
+        "z": "b76e07cc73437430",
+        "name": "final-sensor-data",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1270,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "eadd4326eca35152",
+        "type": "ui_gauge",
+        "z": "b76e07cc73437430",
+        "name": "Temperature",
+        "group": "ba2b69e784299789",
+        "order": 1,
+        "width": 4,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "°C",
+        "format": "{{value | number:1}}",
+        "min": "-10",
+        "max": "40",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "18",
+        "seg2": "26",
+        "diff": false,
+        "className": "",
+        "x": 1170,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "54da9be65bd1549d",
+        "type": "ui_gauge",
+        "z": "b76e07cc73437430",
+        "name": "Feuchtigkeit",
+        "group": "3b2a72addecdf04a",
+        "order": 1,
+        "width": 4,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Luftfeuchte",
+        "label": "%",
+        "format": "{{value | number:0}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "40",
+        "seg2": "70",
+        "diff": false,
+        "className": "",
+        "x": 1190,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "f3478ca4b660f304",
+        "type": "ui_gauge",
+        "z": "b76e07cc73437430",
+        "name": " Pressure Gauge",
+        "group": "f526c016d409464f",
+        "order": 1,
+        "width": 4,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Luftdruck",
+        "label": "hPa",
+        "format": "{{value | number:1}}",
+        "min": "980",
+        "max": "1040",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "1000",
+        "seg2": "1020",
+        "diff": false,
+        "className": "",
+        "x": 1220,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "9db8242d67a692f7",
+        "type": "ui_chart",
+        "z": "b76e07cc73437430",
+        "name": "Temperatur Historie",
+        "group": "ba2b69e784299789",
+        "order": 2,
+        "width": 4,
+        "height": 4,
+        "label": "Temperaturverlauf",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "40",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1190,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f46101bf7a53447f",
+        "type": "ui_chart",
+        "z": "b76e07cc73437430",
+        "name": "Feuchtigkeits Historie",
+        "group": "3b2a72addecdf04a",
+        "order": 2,
+        "width": 4,
+        "height": 4,
+        "label": "Feuchtigkeitsverlauf",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1220,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4d2e33e15b1f1b03",
+        "type": "ui_chart",
+        "z": "b76e07cc73437430",
+        "name": "Luftdruck Historie",
+        "group": "f526c016d409464f",
+        "order": 2,
+        "width": 4,
+        "height": 4,
+        "label": "Luftdruckverlauf",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "980",
+        "ymax": "1040",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1230,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "29be053138c9bdcc",
+        "type": "function",
+        "z": "b76e07cc73437430",
+        "name": "dashboard_data_sensor",
+        "func": "if (msg.payload) {\n    // Hauptwerte für Gauges und Charts\n    const outputs = [\n        {payload: msg.payload.temperature},\n        {payload: msg.payload.humidity},\n        {payload: msg.payload.airpressure}\n    ];\n    \n    // Status-Berechnungen\n    const tempStatus = msg.payload.temperature > 28 ? 'hot' : msg.payload.temperature < 5 ? 'cold' : 'optimal';\n    const humidStatus = msg.payload.humidity > 75 ? 'humid' : msg.payload.humidity < 35 ? 'dry' : 'optimal';\n    const pressStatus = msg.payload.airpressure > 1025 ? 'high' : msg.payload.airpressure < 1005 ? 'low' : 'optimal';\n    \n    // Status-Outputs\n    outputs.push(\n        {payload: tempStatus},\n        {payload: humidStatus},\n        {payload: pressStatus}\n    );\n    \n    return outputs;\n}\nreturn null;",
+        "outputs": 6,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 160,
+        "wires": [
+            [
+                "eadd4326eca35152",
+                "9db8242d67a692f7"
+            ],
+            [
+                "54da9be65bd1549d",
+                "f46101bf7a53447f"
+            ],
+            [
+                "f3478ca4b660f304",
+                "4d2e33e15b1f1b03"
+            ],
+            [
+                "67f7081d873b8754"
+            ],
+            [
+                "d4fd2f312e7f4c0a"
+            ],
+            [
+                "7cc4e0d0206fff4d"
+            ]
+        ]
+    },
+    {
+        "id": "67f7081d873b8754",
+        "type": "ui_template",
+        "z": "b76e07cc73437430",
+        "group": "ba2b69e784299789",
+        "name": "temp",
+        "order": 3,
+        "width": 4,
+        "height": 4,
+        "format": "<div style=\"text-align: center;\">\n    <i class=\"fa fa-2x\" ng-class=\"{\n        'fa-thermometer-full red': msg.payload === 'hot',\n        'fa-thermometer-empty blue': msg.payload === 'cold',\n        'fa-thermometer-half green': msg.payload === 'optimal'\n    }\"></i>\n    <div ng-class=\"{\n        'red': msg.payload === 'hot',\n        'blue': msg.payload === 'cold',\n        'green': msg.payload === 'optimal'\n    }\">\n        {{msg.payload === 'hot' ? 'Hitze' : msg.payload === 'Kälte' ? 'Too Cold' : 'Angenehme Temperaturen'}}\n    </div>\n</div>\n<style>\n    .red { color: #ca3838; }\n    .blue { color: #3878ca; }\n    .green { color: #00b500; }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1150,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d4fd2f312e7f4c0a",
+        "type": "ui_template",
+        "z": "b76e07cc73437430",
+        "group": "3b2a72addecdf04a",
+        "name": "hum",
+        "order": 3,
+        "width": 4,
+        "height": 4,
+        "format": "<div style=\"text-align: center;\">\n    <i class=\"fa fa-2x\" ng-class=\"{\n        'fa-tint red': msg.payload === 'humid',\n        'fa-tint-slash blue': msg.payload === 'dry',\n        'fa-tint green': msg.payload === 'optimal'\n    }\"></i>\n    <div ng-class=\"{\n        'red': msg.payload === 'humid',\n        'blue': msg.payload === 'dry',\n        'green': msg.payload === 'optimal'\n    }\">\n        {{msg.payload === 'humid' ? 'Zu Feucht' : msg.payload === 'Zu Trocken' ? 'Too Dry' : 'Optimale Luftfeuchte'}}\n    </div>\n</div>\n<style>\n    .red { color: #ca3838; }\n    .blue { color: #3878ca; }\n    .green { color: #00b500; }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1170,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7cc4e0d0206fff4d",
+        "type": "ui_template",
+        "z": "b76e07cc73437430",
+        "group": "f526c016d409464f",
+        "name": "press",
+        "order": 3,
+        "width": "4",
+        "height": "4",
+        "format": "<div style=\"text-align: center;\">\n<i class=\"fa fa-2x\" ng-class=\"{\n    'fa-arrow-up red': msg.payload === 'high',\n    'fa-arrow-down blue': msg.payload === 'low',\n    'fa-arrows-h green': msg.payload === 'optimal'\n}\"></i>\n\n    <div ng-class=\"{\n        'red': msg.payload === 'high',\n        'blue': msg.payload === 'low',\n        'green': msg.payload === 'optimal'\n    }\">\n        {{msg.payload === 'high' ? 'Hoher Luftdruck' : msg.payload === 'low' ? 'Niedriger Luftdruck' : 'Normaler\n        Luftdruck'}}\n    </div>\n</div>\n\n<style>\n    .red {\n        color: #ca3838;\n    }\n\n    .blue {\n        color: #3878ca;\n    }\n\n    .green {\n        color: #00b500;\n    }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1190,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4f3c2512a46868d4",
+        "type": "inject",
+        "z": "b76e07cc73437430",
+        "name": "test_payload_sensor",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"temperature\":30.34,\"airpressure\":1013.5,\"humidity\":45.5}",
+        "payloadType": "json",
+        "x": 130,
+        "y": 280,
+        "wires": [
+            [
+                "29be053138c9bdcc"
+            ]
+        ]
+    },
+    {
+        "id": "ef71c743f0b12be8",
+        "type": "dwdweather",
+        "z": "b76e07cc73437430",
+        "name": "",
+        "mosmixStation": "10389",
+        "lookAheadHours": "0",
+        "additionalFields": "",
+        "omitMessageOnStart": true,
+        "repeat": "0",
+        "topic": "",
+        "x": 310,
+        "y": 180,
+        "wires": [
+            [
+                "4749d24d0da36570",
+                "8914b36d5241c5e7"
+            ]
+        ]
+    },
+    {
+        "id": "b3b300f1da60d288",
+        "type": "ui_gauge",
+        "z": "b76e07cc73437430",
+        "name": "Windgeschwindigkeit",
+        "group": "42ae0f116d29be14",
+        "order": 1,
+        "width": 4,
+        "height": 4,
+        "gtype": "compass",
+        "title": "Windgeschwindigkeit",
+        "label": "km/h",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "15",
+        "seg2": "30",
+        "diff": false,
+        "className": "",
+        "x": 1240,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "98f579e019cd8ac6",
+        "type": "ui_gauge",
+        "z": "b76e07cc73437430",
+        "name": "Chance für Niederschlag",
+        "group": "761f6d9572fb2429",
+        "order": 1,
+        "width": 4,
+        "height": 4,
+        "gtype": "wave",
+        "title": "Niederschlagschance",
+        "label": "%",
+        "format": "{{value}}",
+        "min": "30",
+        "max": "70",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "15",
+        "seg2": "30",
+        "diff": false,
+        "className": "",
+        "x": 1250,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "34742caf9787d37c",
+        "type": "ui_template",
+        "z": "b76e07cc73437430",
+        "group": "42ae0f116d29be14",
+        "name": "wind",
+        "order": 2,
+        "width": 4,
+        "height": 4,
+        "format": "<div style=\"text-align: center;\">\n    <i class=\"fa fa-2x\" ng-class=\"{\n        'fa-wind red': msg.payload === 'strong',\n        'fa-wind yellow': msg.payload === 'moderate',\n        'fa-wind green': msg.payload === 'calm'\n    }\"></i>\n    <div ng-class=\"{\n        'red': msg.payload === 'strong',\n        'yellow': msg.payload === 'moderate',\n        'green': msg.payload === 'calm'\n    }\">\n        {{msg.payload === 'strong' ? 'Starker Wind' : msg.payload === 'Moderater Wind' ? 'Moderate Wind' : 'Ruhiger Wind'}}\n    </div>\n</div>\n<style>\n    .red {\n        color: #ca3838;\n    }\n\n    .yellow {\n        color: #cab938;\n    }\n\n    .green {\n        color: #00b500;\n    }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1190,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1aa3e0bb0a9cdbeb",
+        "type": "ui_template",
+        "z": "b76e07cc73437430",
+        "group": "761f6d9572fb2429",
+        "name": "rainchance",
+        "order": 2,
+        "width": 4,
+        "height": 4,
+        "format": "<div style=\"text-align: center;\">\n    <i class=\"fa fa-2x\" ng-class=\"{\n        'fa-cloud-rain red': msg.payload === 'high',\n        'fa-cloud-rain yellow': msg.payload === 'medium',\n        'fa-sun green': msg.payload === 'low'\n    }\"></i>\n    <div ng-class=\"{\n        'red': msg.payload === 'high',\n        'yellow': msg.payload === 'medium',\n        'green': msg.payload === 'low'\n    }\">\n        {{msg.payload === 'high' ? 'Hohe Chance' : msg.payload === 'Mäßige Chance' ? 'Medium Chance' : 'Niedrige Chance'}}\n    </div>\n</div>\n<style>\n    .red {\n        color: #ca3838;\n    }\n\n    .yellow {\n        color: #cab938;\n    }\n\n    .green {\n        color: #00b500;\n    }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1210,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ad07f0591f474863",
+        "type": "inject",
+        "z": "b76e07cc73437430",
+        "name": "test_payload_dwd",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"station\":\"BERLIN-ALEX.\",\"tempc\":10.5,\"humidity\":52,\"windspeed\":4.2,\"winddirection\":28.6,\"precipitation_perc\":1.1,\"precipitationNext24h\":0,\"forecast_dt\":1743529939621,\"precipitation%\":1.1}",
+        "payloadType": "json",
+        "x": 130,
+        "y": 340,
+        "wires": [
+            [
+                "4749d24d0da36570"
+            ]
+        ]
+    },
+    {
+        "id": "4749d24d0da36570",
+        "type": "function",
+        "z": "b76e07cc73437430",
+        "name": "dashboard_data_dwd",
+        "func": "if (msg.payload) {\n    // Hauptwerte für Gauges\n    const outputs = [\n        {payload: msg.payload.windspeed},         // Windgeschwindigkeit\n        {payload: msg.payload[\"precipitation%\"]}   // Regenwahrscheinlichkeit\n    ];\n    \n    // Status-Berechnungen\n    const windStatus = msg.payload.windspeed > 30 ? 'strong' : \n                      msg.payload.windspeed > 15 ? 'moderate' : 'calm';\n    const rainStatus = msg.payload[\"precipitation%\"] > 70 ? 'high' : \n                      msg.payload[\"precipitation%\"] > 30 ? 'medium' : 'low';\n    \n    // Status-Outputs\n    outputs.push(\n        {payload: windStatus},\n        {payload: rainStatus}\n    );\n    \n    return outputs;\n}\nreturn null;",
+        "outputs": 4,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 300,
+        "wires": [
+            [
+                "b3b300f1da60d288"
+            ],
+            [
+                "98f579e019cd8ac6"
+            ],
+            [
+                "34742caf9787d37c"
+            ],
+            [
+                "1aa3e0bb0a9cdbeb"
+            ]
+        ]
+    },
+    {
+        "id": "6904ffa547c7573f",
+        "type": "inject",
+        "z": "b76e07cc73437430",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 180,
+        "wires": [
+            [
+                "ef71c743f0b12be8"
+            ]
+        ]
+    },
+    {
+        "id": "8914b36d5241c5e7",
+        "type": "debug",
+        "z": "b76e07cc73437430",
+        "name": "dwd_data",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1240,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "d579b6b7f8c19cad",
+        "type": "mqtt in",
+        "z": "b76e07cc73437430",
+        "g": "a0b1ed0895f897d2",
+        "name": "ttn-mqtt-in",
+        "topic": "#",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "d830577d72ddaeb6",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 100,
+        "y": 960,
+        "wires": [
+            [
+                "da5f0eee4df411b9",
+                "7c3f2554df714e5b",
+                "bd2ad14949f6a20d",
+                "ba78c621b350a7d7"
+            ]
+        ]
+    },
+    {
+        "id": "da5f0eee4df411b9",
+        "type": "debug",
+        "z": "b76e07cc73437430",
+        "g": "a0b1ed0895f897d2",
+        "name": "msg.payload",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 370,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "7c3f2554df714e5b",
+        "type": "debug",
+        "z": "b76e07cc73437430",
+        "g": "a0b1ed0895f897d2",
+        "name": "msg complete object",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "bd2ad14949f6a20d",
+        "type": "function",
+        "z": "b76e07cc73437430",
+        "g": "a0b1ed0895f897d2",
+        "name": "payload_decoder",
+        "func": "// Decoder function for TTN V3 payloads with BME280 data\nfunction decodePayload(bytes) {\n    try {\n        // Extract values from the buffer\n        var tmp = (bytes[0]<<8 | bytes[1]);\n        var pre = (bytes[2]<<8 | bytes[3]);\n        var hum = (bytes[4]);\n        var wnd = (bytes[5]<<8 | bytes[6]);\n        var sun = (bytes[7]);\n        \n        // Apply scaling and return decoded object\n        return {\n            temperature: (tmp-5000)/100,\n            airpressure: pre/10,\n            humidity: hum/2,\n            windspeed: wnd/10,\n            sunlight: sun/2\n        };\n    } catch (e) {\n        node.error(\"Error in payload decoding: \" + e.message);\n        return { error: e.message };\n    }\n}\n\n// Main function to process the TTN message\ntry {\n    // Check if we have a TTN V3 message format\n    if (msg.payload && msg.payload.uplink_message && msg.payload.uplink_message.frm_payload) {\n        // Get the base64 payload\n        const base64Payload = msg.payload.uplink_message.frm_payload;\n        \n        // Convert base64 to buffer\n        const buffer = Buffer.from(base64Payload, 'base64');\n        \n        // Display hex values for debugging\n        let hexValues = [];\n        for (let i = 0; i < buffer.length; i++) {\n            hexValues.push(buffer[i].toString(16).padStart(2, '0'));\n        }\n        node.warn(\"Decoded hex bytes: \" + hexValues.join(' '));\n        \n        // Decode the payload\n        const decoded = decodePayload(buffer);\n        \n        // Keep the original message structure but replace the decoded fields\n        msg.decoded = decoded;\n        \n        // Option 1: Keep full TTN structure but add decoded data\n        //msg.payload.decoded = decoded;\n        \n        // Option 2: Replace payload with just the decoded data\n        // Uncomment the next line if you prefer this approach\n        msg.payload = decoded;\n        \n        return msg;\n    } \n    // Handle direct buffer input (for testing with inject nodes)\n    else if (Buffer.isBuffer(msg.payload)) {\n        node.warn(\"Direct buffer input detected\");\n        msg.payload = decodePayload(msg.payload);\n        return msg;\n    }\n    // Handle payload structure with just the frm_payload field\n    else if (msg.payload && msg.payload.frm_payload) {\n        const buffer = Buffer.from(msg.payload.frm_payload, 'base64');\n        msg.payload = decodePayload(buffer);\n        return msg;\n    }\n    else {\n        // If we can't identify the structure, send an error\n        node.warn(\"Unknown payload format: \" + JSON.stringify(msg.payload).substring(0, 100) + \"...\");\n        msg.payload = { \n            error: \"Unrecognized payload format\",\n            original: typeof msg.payload === 'object' ? \"Object\" : typeof msg.payload\n        };\n        return msg;\n    }\n} catch (error) {\n    node.error(\"Error processing message: \" + error.message);\n    msg.payload = { error: error.message };\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 860,
+        "wires": [
+            [
+                "9351eebe27ccc2a3"
+            ]
+        ]
+    },
+    {
+        "id": "9351eebe27ccc2a3",
+        "type": "debug",
+        "z": "b76e07cc73437430",
+        "g": "a0b1ed0895f897d2",
+        "name": "ws_data_full",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 610,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "ba78c621b350a7d7",
+        "type": "function",
+        "z": "b76e07cc73437430",
+        "g": "a0b1ed0895f897d2",
+        "name": "smaller_decoder",
+        "func": "function decodePayload(bytes) {\n    try {\n        // Extract and scale sensor values\n        const temp = ((bytes[0]<<8 | bytes[1]) - 5000) / 100;\n        const pressure = (bytes[2]<<8 | bytes[3]) / 10;\n        const humidity = bytes[4] / 2;\n        \n        return {\n            temperature: temp,\n            airpressure: pressure,\n            humidity: humidity\n        };\n    } catch (e) {\n        return { error: e.message };\n    }\n}\n\n// Process incoming TTN V3 message\ntry {\n    if (msg.payload?.uplink_message?.frm_payload) {\n        const buffer = Buffer.from(msg.payload.uplink_message.frm_payload, 'base64');\n        msg.payload = decodePayload(buffer);\n        return msg;\n    }\n    return { payload: { error: \"Invalid message format\" } };\n} catch (error) {\n    return { payload: { error: error.message } };\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 960,
+        "wires": [
+            [
+                "6ee145a492e1f711"
+            ]
+        ]
+    },
+    {
+        "id": "6ee145a492e1f711",
+        "type": "debug",
+        "z": "b76e07cc73437430",
+        "g": "a0b1ed0895f897d2",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 960,
+        "wires": []
+    }
+]
